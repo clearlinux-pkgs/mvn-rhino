@@ -4,12 +4,14 @@
 #
 Name     : mvn-rhino
 Version  : 1.7.7
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7.7/rhino-1.7.7.jar
 Source0  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7.7/rhino-1.7.7.jar
-Source1  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7.7/rhino-1.7.7.pom
-Source2  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7R3/rhino-1.7R3.jar
-Source3  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7R3/rhino-1.7R3.pom
+Source1  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7.10/rhino-1.7.10.jar
+Source2  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7.10/rhino-1.7.10.pom
+Source3  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7.7/rhino-1.7.7.pom
+Source4  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7R3/rhino-1.7R3.jar
+Source5  : https://repo1.maven.org/maven2/org/mozilla/rhino/1.7R3/rhino-1.7R3.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 MPL-1.1 MPL-2.0
@@ -35,14 +37,20 @@ data components for the mvn-rhino package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.7
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.7/rhino-1.7.7.jar
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.10
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.10/rhino-1.7.10.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.10
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.10/rhino-1.7.10.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.7
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.7/rhino-1.7.7.pom
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.7/rhino-1.7.7.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7R3
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7R3/rhino-1.7R3.jar
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7R3/rhino-1.7R3.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7R3
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7R3/rhino-1.7R3.pom
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7R3/rhino-1.7R3.pom
 
 
 %files
@@ -50,6 +58,8 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/mozilla/rhino/1.7R3
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.10/rhino-1.7.10.jar
+/usr/share/java/.m2/repository/org/mozilla/rhino/1.7.10/rhino-1.7.10.pom
 /usr/share/java/.m2/repository/org/mozilla/rhino/1.7.7/rhino-1.7.7.jar
 /usr/share/java/.m2/repository/org/mozilla/rhino/1.7.7/rhino-1.7.7.pom
 /usr/share/java/.m2/repository/org/mozilla/rhino/1.7R3/rhino-1.7R3.jar
